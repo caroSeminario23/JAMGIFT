@@ -182,7 +182,10 @@ body {
 const messages = [
     "Gracias por ser ese rayo de luz que alegra mi vida",
     "Confía en ti mismo, haz crecido. Estate orgulloso",
-    "Dulzura+travesura = Jamil",
+    "Dulzura + travesura = Jamil",
+    "No importa la distancia, siempre estaré aquí para ti",
+    "Eres mi único espe cute, ¡te quiero mucho!",
+    "Espero que este regalo te haga sonreír tanto como tú me haces sonreír a mí",
     "Besitos y abrazos a la distancia, mi espe cute"
 ];
 
@@ -231,7 +234,7 @@ gift.addEventListener("click", () => {
         audio.play();
     }
 
-    if (currentLayer < 4) {
+    if (currentLayer < 6) {
         gift.classList.add("open");
         card.textContent = messages[currentLayer];
         card.classList.add("show");
@@ -240,11 +243,11 @@ gift.addEventListener("click", () => {
             gift.classList.remove("open");
             gift.style.background = getRandomColor();
             card.classList.remove("show");
-        }, 1500);
+        }, 2000);
 
         currentLayer++;
 
-        if (currentLayer === 4) {
+        if (currentLayer === 6) {
             setTimeout(showFinal, 3000);
         }
     }
